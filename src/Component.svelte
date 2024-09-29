@@ -8,6 +8,8 @@
     customer: {},
     transactions: []
   });
+  export let customerTableId = null;
+  export let transactionsTableId = null;
 
   let customerId = null;
   routeStore.subscribe(state => {
@@ -19,7 +21,7 @@
     try {
 
       const customerResponse = await API.post({
-        url: 'api/ta_1fe2176c6d2f436b8305326b4ca92546/search',
+        url: `api/${customerTableId}/search`,
         body: {
           "query": {
             "paginate": "true",
@@ -33,7 +35,7 @@
       console.log('customerResponse', customerResponse);
 
       const transactionsResponse = await API.post({
-        url: 'api/ta_0e781b303d41482ab68bf56f5fccc7a2/search',
+        url: `api/${transactionsTableId}/search`,
         body: {
           "query": {
             "equal" : {

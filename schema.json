@@ -6,6 +6,18 @@
     "friendlyName": "usdz-customer-view",
     "description": "USDZ cash flow view for ZION Capital customers",
     "icon": "Money",
-    "settings": [ ]
+    "settings": [
+      {
+        "type": "text",
+        "label": "Customer Table Id",
+        "key": "customerTableId"
+      },
+      {
+        "type": "text",
+        "label": "Transactions Table Id",
+        "key": "transactionsTableId"
+      }
+
+    ]
   }
 }
