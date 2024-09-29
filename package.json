@@ -1,6 +1,6 @@
 {
   "name": "usdz-customer-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "USDZ cash flow view for ZION Capital customers",
   "license": "MIT",
   "svelte": "index.js",
