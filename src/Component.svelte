@@ -119,27 +119,34 @@
           <div class="balance-header">
             <span>Saldo em conta</span>
           </div>
-          <div class="balance-amount">{snippets.formatToBRL(customer.balance + customer.future_balance)}</div>
+          <div class="balance-amount">
+            {
+                    snippets.formatToBRL(
+                            (customer.balance ? customer.balance : 0) +
+                            (customer.future_balance ? customer.future_balance : 0)
+                    )
+            }
+          </div>
         </div>
       </div>
       <div class="balance-details">
         <div class="balance-item balance-card">
           <div class="balance-label">Saldo Realizado</div>
-          <div class="balance-value">{snippets.formatToBRL(customer.balance)}</div>
+          <div class="balance-value">{snippets.formatToBRL(customer.balance ? customer.balance : 0)}</div>
         </div>
         <div class="balance-item balance-card">
           <div class="balance-label">Lançamentos Futuro</div>
-          <div class="balance-value">{snippets.formatToBRL(customer.future_balance)}</div>
+          <div class="balance-value">{snippets.formatToBRL(customer.future_balance ? customer.future_balance : 0)}</div>
         </div>
       </div>
       <div class="balance-details">
         <div class="balance-item balance-card">
           <div class="balance-label">Crédito Futuro</div>
-          <div class="balance-value">{snippets.formatToBRL(customer.future_credit)}</div>
+          <div class="balance-value">{snippets.formatToBRL(customer.future_credit ? customer.future_credit : 0)}</div>
         </div>
         <div class="balance-item balance-card">
           <div class="balance-label">Saque Futuro</div>
-          <div class="balance-value">{snippets.formatToBRL(customer.future_debit)}</div>
+          <div class="balance-value">{snippets.formatToBRL(customer.future_debit ? customer.future_debit : 0)}</div>
         </div>
       </div>
       <div class="last-update">
