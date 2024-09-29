@@ -1,0 +1,11 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "usdz-customer-view",
+    "friendlyName": "usdz-customer-view",
+    "description": "USDZ cash flow view for ZION Capital customers",
+    "icon": "Money",
+    "settings": [ ]
+  }
+}
